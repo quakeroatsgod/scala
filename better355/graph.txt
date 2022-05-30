@@ -1,0 +1,11 @@
+home null 0
+a home 1
+b a 1
+c home 0 b 2
+d home 1
+e a 2 b 7 c 6
+f e 4 d 5
+g f 0 d 8
+h e 3
+i f 3 g 3
+office h 8 i 1
