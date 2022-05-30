@@ -1,14 +1,12 @@
 /*
 *   This is a refresher of how to write scala code. More importantly, This is my final project from
 *   CS 355 that has been remade to make it more robust. It is the same idea as Scenario 1, except 
-*   with file I/O, less hard-coding, and more(?)
+*   with file I/O, less hard-coding, and more
 *    dfi 1 5 3 1 =10
 *    Fastest Path on given graph:   dfi
 */
 import scala.io.Source
-import java.io.FileReader
 import java.io.FileNotFoundException
-import java.io.IOException
 object Main{
     //Node class that we can use to build the graph. Each node has a name as well
     //as three node tuples that it "points" to. Each tuple has an integer cost
@@ -30,7 +28,6 @@ object Main{
             //Insert the node path. Duplcates are not inserted
             startNode.paths++=Set((newNode,path.apply(startNode.name)))
         }
-        //TODO add node to path list so that you can traverse backwards in the graph
         //Recursively traverse the graph in the event that we need to go further to make a node
         for(nodePath <- startNode.paths){
             graphInsert(nodePath._1,newNode,path)
